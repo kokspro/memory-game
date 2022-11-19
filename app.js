@@ -61,7 +61,6 @@ const checkMatch = (e) => {
     const flippedCards = document.querySelectorAll('.flipped');
     if ( flippedCards.length === 2) {
         if ( flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')) {
-            console.log("match");
             flippedCards.forEach(card => {
                 card.classList.remove('flipped');
                 card.style.pointerEvents = 'none';
@@ -69,7 +68,6 @@ const checkMatch = (e) => {
             attempts++;
             attemptsCount.innerHTML = attempts;
         } else {
-            console.log("No match");
             flippedCards.forEach(card => {
                 card.classList.remove('flipped');
                 setTimeout(() => card.classList.remove('flipCard'), 1000);
