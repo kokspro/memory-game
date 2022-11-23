@@ -45,3 +45,10 @@ body {
 .flipCard {
     transform: rotateY(180deg);
 }
+
+.reset {
+    font-size: 1.5rem;
+    padding: .3rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}

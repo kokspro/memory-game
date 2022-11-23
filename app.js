@@ -1,8 +1,14 @@
 const container = document.querySelector(".container");
 const attemptsCount = document.querySelector("span");
+const resetButton = document.querySelector(".reset");
 let attempts = 0;
 
 attemptsCount.innerHTML = attempts;
+
+resetButton.addEventListener('click', () => {
+    location.reload();
+});
+
 
 const getData = () => [
     { imgSrc: "./images/Forest1.jpg", name: "forest1"},
@@ -78,6 +84,8 @@ const checkMatch = (e) => {
         }
     }
     
-}
+};
+
 
 cardGenerator();
+
