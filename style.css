@@ -1,9 +1,12 @@
+/* Universal */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
+/* Elements Start */
 body {
     height: 100vh;
     display: flex;
@@ -12,20 +15,21 @@ body {
     flex-direction: column;
     background: linear-gradient(lightblue, black);
 }
+/* Elements End */
 
+/* Class Start */
 .container {
     display: grid;
     grid-template-columns: repeat(5, 8rem);
     grid-template-rows: repeat(4, 8rem);
     grid-gap: 1rem;
     margin-top: 1rem;
-    perspective: 800px;
 }
 
 .card {
     position: relative;
     transform-style: preserve-3d;
-    transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transform-style: preserve-3d;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 12px;
 }
 
@@ -40,6 +44,7 @@ body {
     background-image: url("./images/questionmark1.png");
     background-size: cover;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .flipCard {
@@ -52,3 +57,5 @@ body {
     border-radius: 1rem;
     margin-bottom: 1rem;
 }
+
+/* Class End */
